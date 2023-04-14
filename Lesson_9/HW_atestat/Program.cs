@@ -3,12 +3,11 @@
 // M = 1; N = 5 -> "2, 4"
 // M = 4; N = 8 -> "4, 6, 8"
 
-Console.Write("Введите значение М: ");
+Console.Write("Введите значение M: ");
 int m = int.Parse(Console.ReadLine()!);
 Console.Write("Введите значение N: ");
 int n = int.Parse(Console.ReadLine()!);
-
-void Chetnie(int n, int m)
+void chetnie(int m, int n)
 {
     if (m > n)
         return;
@@ -16,6 +15,7 @@ void Chetnie(int n, int m)
     {
         Console.Write($"{m}, ");
     }
-    Chetnie(m + 1, n);
+    chetnie(m + 1, n);
+
 }
-Chetnie(m, n);
+chetnie(m, n);
